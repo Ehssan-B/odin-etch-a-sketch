@@ -18,9 +18,8 @@ function createGrid (gridSize):
 
 */
 
-const gridContainer = document.querySelector(".grid-container");
-
-const createGrid = function(dimension, container){
+const createGrid = function(dimension){
+    const gridContainer = document.querySelector(".grid-container");
     for (let row = 0; row < dimension; row++){
         const gridRow = document.createElement("div")
         gridRow.classList.add("grid-row");
@@ -31,6 +30,11 @@ const createGrid = function(dimension, container){
         }
         container.append(gridRow);
     }
+}
+
+const removeGrid = function(){
+    const gridContainer = document.querySelector(".grid-container");
+    gridContainer.innerHTML = "";
 }
 
 createGrid(10, gridContainer);
