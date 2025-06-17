@@ -6,6 +6,7 @@
 
 body {
     display: flex;
+    flex-direction: column;
 
     justify-content: center;
     align-items: center;
@@ -15,15 +16,22 @@ body {
     width: 500px;
     height: 500px;
 
+    padding: 5px;
+    margin: 5px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-row {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-
+    flex: 1;
 }
 
 .grid-square {
     outline: 0.1px solid red;
-    flex: 0 0 auto;
+    flex: 1;
 }
 
 .grid-active {

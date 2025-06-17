@@ -18,3 +18,19 @@ function createGrid (gridSize):
 
 */
 
+const gridContainer = document.querySelector(".grid-container");
+
+const createGrid = function(dimension, container){
+    for (let row = 0; row < dimension; row++){
+        const gridRow = document.createElement("div")
+        gridRow.classList.add("grid-row");
+        for (let sqr = 0; sqr < dimension; sqr++){
+            const gridSqr = document.createElement("div");
+            gridSqr.classList.add("grid-square");
+            gridRow.append(gridSqr);
+        }
+        container.append(gridRow);
+    }
+}
+
+createGrid(10, gridContainer);
