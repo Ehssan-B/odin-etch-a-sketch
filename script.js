@@ -26,6 +26,9 @@ const createGrid = function(dimension){
         for (let sqr = 0; sqr < dimension; sqr++){
             const gridSqr = document.createElement("div");
             gridSqr.classList.add("grid-square");
+            gridSqr.addEventListener("mouseover", e => {
+                e.target.classList.add("grid-active");
+            })
             gridRow.append(gridSqr);
         }
         gridContainer.append(gridRow);
