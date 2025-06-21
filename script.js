@@ -45,4 +45,11 @@ clearGridButton.addEventListener("click", e => {
     createGrid(dimension);    
 })
 
+const dimensionInput = document.querySelector("#grid-dim");
+dimensionInput.addEventListener("input", e => {
+    removeGrid()
+    const dimension = e.target.valueAsNumber
+    createGrid(dimension);
+})
+
 createGrid(5);
