@@ -28,7 +28,7 @@ const createGrid = function(dimension){
             gridSqr.classList.add("grid-square");
             gridRow.append(gridSqr);
         }
-        container.append(gridRow);
+        gridContainer.append(gridRow);
     }
 }
 
@@ -37,4 +37,4 @@ const removeGrid = function(){
     gridContainer.innerHTML = "";
 }
 
-createGrid(10, gridContainer);
+createGrid(10);
