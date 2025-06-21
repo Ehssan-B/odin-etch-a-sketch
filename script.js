@@ -37,4 +37,12 @@ const removeGrid = function(){
     gridContainer.innerHTML = "";
 }
 
-createGrid(10);
+const clearGridButton = document.querySelector(".clear-btn");
+
+clearGridButton.addEventListener("click", e => {
+    const dimension = document.querySelectorAll(".grid-row").length;
+    removeGrid();
+    createGrid(dimension);    
+})
+
+createGrid(5);

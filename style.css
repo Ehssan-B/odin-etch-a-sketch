@@ -16,11 +16,13 @@ body {
     width: 500px;
     height: 500px;
 
-    padding: 5px;
+    padding: 0px;
     margin: 5px;
 
     display: flex;
     flex-direction: column;
+
+    border: 1px black solid;
 }
 
 .grid-row {
